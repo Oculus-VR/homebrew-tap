@@ -17,7 +17,7 @@ class MetaXrSimulator < Formula
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     prefix.install Dir["*"]
     puts "Installation complete!"
-    puts "Meta XR Simualtor was installed in #{prefix}"
+    puts
     ohai "Please run the following commands to allow OpenXR apps to load it as the active runtime:"
     puts "sudo xattr -d com.apple.quarantine #{prefix}/SIMULATOR.so"
     puts "sudo mkdir -p /usr/local/share/openxr/1"
