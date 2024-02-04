@@ -20,7 +20,7 @@ class MetaXrSimulator < Formula
     ohai "\u{1F950} Please run the following commands to set Meta XR Simulator as the active OpenXR runtime:"
     puts "sudo xattr -d com.apple.quarantine #{prefix}/SIMULATOR.so"
     puts "sudo mkdir -p /usr/local/share/openxr/1"
-    puts "ln -s #{prefix}/meta_openxr_simulator.json /usr/local/share/openxr/1/active_runtime.json
+    puts "sudo ln -s #{prefix}/meta_openxr_simulator.json /usr/local/share/openxr/1/active_runtime.json
     "
     ohai "\u{1F37A} More information can be found at https://github.com/Oculus-VR/homebrew-repo/blob/main/meta-xr-simulator.md"
     puts
