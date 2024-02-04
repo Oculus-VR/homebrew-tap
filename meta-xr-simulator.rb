@@ -16,6 +16,14 @@ class MetaXrSimulator < Formula
     # system "./configure", "--disable-silent-rules", *std_configure_args
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     prefix.install Dir["*"]
+    puts "Installation complete!"
+    puts "Meta XR Simualtor was installed in #{prefix}"
+    ohai "Please run the following commands to allow OpenXR apps to load it as the active runtime:"
+    puts "sudo xattr -d com.apple.quarantine #{prefix}/SIMULATOR.so"
+    puts "sudo mkdir -p /usr/local/share/openxr/1"
+    puts "ln -s #{prefix}/meta_openxr_simulator.json /usr/local/share/openxr/1/active_runtime.json
+    "
+    ohai "More instructions in https://github.com/Oculus-VR/homebrew-repo/blob/main/meta-xr-simulator.md"
   end
 
   test do
