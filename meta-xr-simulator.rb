@@ -27,8 +27,10 @@ class MetaXrSimulator < Formula
   end
 
   def caveats
-    puts "\u{26F3} By installing this software, you agree to Meta Platform Technologies SDK License, which can be found at:"
-    puts "https://developer.oculus.com/licenses/oculussdk/"
+    <<~EOS
+      \u{26F3} By installing this software, you agree to Meta Platform Technologies SDK License, which can be found at:
+      \u{26F3} https://developer.oculus.com/licenses/oculussdk/
+    EOS
   end
 
   test do
