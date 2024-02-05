@@ -28,7 +28,7 @@ class MetaXrSimulator < Formula
 
   def caveats
     <<~EOS
-      By installing this software, you agree to Meta Platform Technologies SDK License, which can be found at:
+      \u{26A0} By installing this software, you agree to Meta Platform Technologies SDK License, which can be found at:
       https://developer.oculus.com/licenses/oculussdk/
     EOS
   end
