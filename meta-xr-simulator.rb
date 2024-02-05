@@ -23,14 +23,8 @@ class MetaXrSimulator < Formula
     puts "sudo ln -s #{prefix}/meta_openxr_simulator.json /usr/local/share/openxr/1/active_runtime.json
     "
     ohai "\u{1F37A} More information can be found at https://github.com/Oculus-VR/homebrew-repo/blob/main/meta-xr-simulator.md"
+    ohai "\u{26F3} By installing this software, you agree to Meta Platform Technologies SDK License, which can be found at: https://developer.oculus.com/licenses/oculussdk/"
     puts
-  end
-
-  def caveats
-    <<~EOS
-      \u{26F3} By installing this software, you agree to Meta Platform Technologies SDK License, which can be found at:
-      \u{26F3} https://developer.oculus.com/licenses/oculussdk/
-    EOS
   end
 
   test do
