@@ -5,7 +5,7 @@ class MetaXrSimulator < Formula
   homepage "https://developer.oculus.com/downloads/package/meta-xr-simulator/"
   url "https://github.com/Oculus-VR/homebrew-repo/raw/main/repo/meta-xr-simulator/meta-xr-simulator-64.0.0-alpha.1.tar.gz"
   sha256 "7dbd29410cc0127100852258f9ade2527ce4106196bd585639603993a3c3fb59"
-  license "Oculus SDK"
+  license "Meta Platform Technologies SDK"
 
   # depends_on "cmake" => :build
 
@@ -24,6 +24,13 @@ class MetaXrSimulator < Formula
     "
     ohai "\u{1F37A} More information can be found at https://github.com/Oculus-VR/homebrew-repo/blob/main/meta-xr-simulator.md"
     puts
+  end
+
+  def caveats
+    <<~EOS
+      By installing this software, you agree to Meta Platform Technologies SDK License, which can be found at:
+      https://developer.oculus.com/licenses/oculussdk/
+    EOS
   end
 
   test do
