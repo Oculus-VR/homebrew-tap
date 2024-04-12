@@ -25,7 +25,7 @@ class MetaXrSimulator < Formula
       opoo "Please follow the instruction on https://vulkan.lunarg.com/doc/sdk/latest/mac/getting_started.html, using using 'System Global Installation'."
       puts
     end
-    opoo "\u{1F950} Please run the following command to enable Meta XR Simulator \u{1F950}"
+    opoo "\u{1F950} Please run the following command to activate Meta XR Simulator \u{1F950}"
     opoo "sudo #{prefix}/post_installation_macos.sh"
     puts
   end
