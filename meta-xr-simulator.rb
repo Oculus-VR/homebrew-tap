@@ -3,8 +3,8 @@
 class MetaXrSimulator < Formula
   desc "Meta XR Simulator"
   homepage "https://developer.oculus.com/downloads/package/meta-xr-simulator/"
-  url "https://github.com/Oculus-VR/homebrew-repo/raw/main/repo/meta-xr-simulator/meta-xr-simulator-64.0.0-alpha.3.tar.gz"
-  sha256 "bf301c129664d0349a545e09e17d654ef5f2295929cb45e8990802826ea47782"
+  url "https://github.com/Oculus-VR/homebrew-repo/raw/main/repo/meta-xr-simulator/meta-xr-simulator-66.0.0-alpha.1.tar.gz"
+  sha256 "8c2f4dd2a84f44baa731554575fd6dd63ce3bd75bab880d5b4166630a2d8f459"
   license "Meta Platform Technologies SDK"
 
   # depends_on "cmake" => :build
@@ -17,11 +17,14 @@ class MetaXrSimulator < Formula
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     prefix.install Dir["*"]
     puts
-    ohai "\u{1F950} Please run the following commands to set Meta XR Simulator as the active OpenXR runtime:"
-    puts "sudo xattr -d com.apple.quarantine #{prefix}/SIMULATOR.so"
-    puts "sudo mkdir -p /usr/local/share/openxr/1"
-    puts "sudo rm /usr/local/share/openxr/1/active_runtime.json"
-    puts "sudo ln -s #{prefix}/meta_openxr_simulator.json /usr/local/share/openxr/1/active_runtime.json"
+    ohai "\u{1F950} Please run the following commands to enable Meta XR Simulator and set it as the active OpenXR runtime:"
+    puts "sudo #{prefix}/post_installation_macos.sh"
+    unless File.exist?("/usr/local/lib/libvulkan.1.dylib") && File.exist?("/usr/local/lib/libMoltenVK.dylib")
+      puts ""
+      opoo "Warning: Vulkan SDK not found in /usr/local/lib."
+      oppo "Please follow the instruction on https://vulkan.lunarg.com/doc/sdk/latest/mac/getting_started.html, using using 'System Global Installation'."
+      puts ""
+    end
     ohai "\u{1F37A} More details for setting up OpenXR on macOS can be found at https://github.com/Oculus-VR/homebrew-repo/blob/main/meta-xr-simulator.md"
     ohai "\u{26F3} By installing this software, you agree to Meta Platform Technologies SDK License, which can be found at: https://developer.oculus.com/licenses/oculussdk/"
     puts
