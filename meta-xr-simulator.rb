@@ -21,7 +21,7 @@ class MetaXrSimulator < Formula
     opoo "More details for setting up OpenXR on macOS can be found at https://github.com/Oculus-VR/homebrew-repo/blob/main/meta-xr-simulator.md"
     puts
     unless File.exist?("/usr/local/lib/libvulkan.1.dylib") && File.exist?("/usr/local/lib/libMoltenVK.dylib")
-      opoo "Vulkan SDK not found in /usr/local/lib"
+      opoo "\u{1F6D1} Vulkan SDK not found in /usr/local/lib"
       opoo "Please follow the instruction on https://vulkan.lunarg.com/doc/sdk/latest/mac/getting_started.html, using using 'System Global Installation'."
       puts
     end
