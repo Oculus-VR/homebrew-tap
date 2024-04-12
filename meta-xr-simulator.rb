@@ -17,16 +17,16 @@ class MetaXrSimulator < Formula
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     prefix.install Dir["*"]
     puts
-    opoo "\u{26F3} By installing this software, you agree to Meta Platform Technologies SDK License, which can be found at: https://developer.oculus.com/licenses/oculussdk/"
-    opoo "\u{1F37A} More details for setting up OpenXR on macOS can be found at https://github.com/Oculus-VR/homebrew-repo/blob/main/meta-xr-simulator.md"
+    opoo "By installing this software, you agree to Meta Platform Technologies SDK License, which can be found at: https://developer.oculus.com/licenses/oculussdk/"
+    opoo "More details for setting up OpenXR on macOS can be found at https://github.com/Oculus-VR/homebrew-repo/blob/main/meta-xr-simulator.md"
     puts
     unless File.exist?("/usr/local/lib/libvulkan.1.dylib") && File.exist?("/usr/local/lib/libMoltenVK.dylib")
-      opoo "Warning: Vulkan SDK not found in /usr/local/lib"
+      opoo "Vulkan SDK not found in /usr/local/lib"
       opoo "Please follow the instruction on https://vulkan.lunarg.com/doc/sdk/latest/mac/getting_started.html, using using 'System Global Installation'."
       puts
     end
-    ohai "\u{1F950} IMPORTANT: Please run the following command to enable Meta XR Simulator:"
-    puts "sudo #{prefix}/post_installation_macos.sh"
+    opoo "\u{1F950}\u{1F950}\u{1F950} Please run the following command to enable Meta XR Simulator:"
+    opoo "sudo #{prefix}/post_installation_macos.sh"
     puts
   end
 
