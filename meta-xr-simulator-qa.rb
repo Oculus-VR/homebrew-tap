@@ -1,6 +1,6 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
-class MetaXrSimulator@qa < Formula
+class MetaXrSimulatorQa < Formula
   desc "Meta XR Simulator (QA release)"
   homepage "https://developer.oculus.com/downloads/package/meta-xr-simulator/"
   url "https://github.com/Oculus-VR/homebrew-repo/raw/main/repo/meta-xr-simulator/meta-xr-simulator-67.0.0-alpha.1.tar.gz"
