@@ -3,8 +3,8 @@
 class MetaXrSimulatorQa < Formula
   desc "Meta XR Simulator (QA release)"
   homepage "https://developer.oculus.com/downloads/package/meta-xr-simulator/"
-  url "https://github.com/Oculus-VR/homebrew-repo/raw/main/repo/meta-xr-simulator/meta-xr-simulator-71.0.0-beta.2.tar.gz"
-  sha256 "fa3df617e7c19ea20ce67b446904403cd425ce2907290ca605b31182d26bced1"
+  url "https://github.com/Oculus-VR/homebrew-repo/raw/main/repo/meta-xr-simulator/meta-xr-simulator-71.0.0-beta.3.tar.gz"
+  sha256 "d7d0ac340fd1b4575f197fbdd75631e1805fbf42b856086f8a86acb3a16bd7d6"
   license "Meta Platform Technologies SDK"
 
   # depends_on "cmake" => :build
